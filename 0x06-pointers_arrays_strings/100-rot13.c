@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - check the code for Holberton School students.
+ * rot13 - check the code for ALX School students.
  * @str: String to be converted
  * Return: Always 0.
  */

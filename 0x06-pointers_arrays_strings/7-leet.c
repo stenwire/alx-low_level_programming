@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * leet - check the code for Holberton School students.
+ * leet - check the code for ALX School students.
  * @str: String to be converted
  * Return: Always 0.
  */

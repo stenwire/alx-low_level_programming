@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * alloc_grid - Entry point
+ *@width: rows of matrix
+ *@height: columns of string
+ * Return: a pointer to a 2 dimensional array of integers or null
+ */
+
 int **alloc_grid(int width, int height)
 {
 	int **matrix;

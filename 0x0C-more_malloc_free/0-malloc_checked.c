@@ -1,22 +1,19 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
-
+#include <stdio.h>
+#include "holberton.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * malloc_checked - Entry Point
+ * @b: input amount
+ * Return: pointer to new mem
  */
- 
-void *malloc_checked(unsigned int b) {
-    void *sten;
-    
-    sten = malloc(sizeof(b) + 1);
-    
-    if(sten==NULL){
-        exit(98);
-    }
-    return(sten);
-    
+void *malloc_checked(unsigned int b)
+{
+	void *n;
+
+	n = malloc(b);
+
+	if (n == NULL)
+		exit(98);
+	return (n);
 }
 

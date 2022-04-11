@@ -1,9 +1,12 @@
-// #include <libgen.h>
 #include <stdlib.h>
-#include <stdlib.h>
-
-#define PRINTFILE() 
-{ char buf[] = __FILE__;
-printf("%s\n", basename(buf));
+#include <stdio.h>
+#include "main.h"
+/**
+ * main - Entry Point
+ * Return: 0
+ */
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
 }
-

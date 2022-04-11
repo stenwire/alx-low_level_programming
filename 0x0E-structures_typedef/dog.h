@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef ALX_H
+#define ALX_H
 
 struct dog
 {
@@ -7,3 +8,4 @@ struct dog
 	char *owner;
 
 }
+#endif

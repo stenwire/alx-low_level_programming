@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_string - check the code for Holberton School students.
+ * rev_string - check the code.
  * @s: String to be reversed
  * Return: Always 0.
  */

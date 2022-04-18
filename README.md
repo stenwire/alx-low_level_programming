@@ -1,1 +1,1 @@
-<h1>README for Shell bash with C-language </h1>
+<h1>README for ALX low-level-programming with C-language </h1>

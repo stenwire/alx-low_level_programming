@@ -2,17 +2,23 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
-
 /**
- * listint_len - list the number of elements
- * @h: pointer to the head
- * @return: the value of count
+ * listint_len - Entry Point
+ * @h: head
+ * Return: 0
  */
 size_t listint_len(const listint_t *h)
-{   int count = 0;
-    while (h != 0)
-        count++;
-        h = h->next;
+{
+	int count = 0;
 
-    return (count);
+	if (h == NULL)
+		return (0);
+
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+
+	return (count);
 }

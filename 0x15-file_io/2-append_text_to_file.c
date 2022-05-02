@@ -1,45 +1,50 @@
 #include "main.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 
 /**
- * _strlen - finds the length of a string
- * @str: pointer to the string
+ * _strlen - compute the length of a NULL-terminated string
+ * @str: the string to measure
  *
- * Return: length of the string
+ * Return: the length of str, or -1 if str is NULL
  */
-size_t _strlen(char *str)
+ssize_t _strlen(const char *str)
 {
-	size_t i;
+	ssize_t len = 0;
 
-	for (i = 0; str[i]; i++)
-		;
-	return (i);
+	if (!str)
+		return (-1);
+
+	while (*str++)
+		++len;
+
+	return (len);
 }
 
 /**
- * append_text_to_file - appends a text at the end of a file.
- * @filename: name of the file
- * @text_content: NULL terminated string to add at the end of the file
+ * create_file - create a file
+ * @filename: the name of the file to create
+ * @text_content: the data to write to filename
  *
- * Return: 1 on success and -1 on failure
+ * Return: Upon success, return 1. Otherwise, return -1.
  */
-int append_text_to_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
+	ssize_t b_written = 0;
 	int fd;
-	ssize_t len;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_APPEND);
-	if (fd == -1)
+
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+
+	if (fd < 0)
 		return (-1);
-	if (text_content != NULL)
-		len = write(fd, text_content, _strlen(text_content));
+
+	if (text_content)
+		b_written = write(fd, text_content, _strlen(text_content));
+
 	close(fd);
-	if (len == -1)
+
+	if (b_written < 0)
 		return (-1);
 	return (1);
 }

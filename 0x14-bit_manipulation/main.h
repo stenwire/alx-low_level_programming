@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef _ALX_H_
+#define _ALX_H_
 
 int _putchar(char);
 unsigned int binary_to_uint(const char *b);
@@ -10,4 +10,4 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 int get_endianness(void);
 
-#endif /* _HOLBERTON_H_ */
+#endif /* _ALX_H_ */

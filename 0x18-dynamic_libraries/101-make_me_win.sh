@@ -1,3 +1,3 @@
 #!/bin/bash
-export LD_PRELOAD=./101-md5_gm
-unset LD_PRELOAD
+wget -P /tmp https://github.com/stenwire/alx-low_level_programming/raw/main/0x18-dynamic_libraries/injector.so
+export LD_PRELOAD=/tmp/injector.so

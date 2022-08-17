@@ -2,9 +2,12 @@ NAME = school
 
 CC = gcc
 
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 
-OBJ = $(patsubst %.c,%.o,$(wildcard *.c))
+OBJ = $(SRC:%.c=%.o)
+
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
 
 RM = rm -f
 
@@ -19,4 +22,4 @@ oclean:
 
 fclean: oclean
 
-re: fclean all
+re: oclean all

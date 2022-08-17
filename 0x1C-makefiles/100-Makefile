@@ -2,11 +2,9 @@ NAME = school
 
 CC = gcc
 
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 
-OBJ = $(patsubst %.c,%.o,$(wildcard *.c))
-
-# RM = rm -f
+OBJ = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
@@ -16,11 +14,11 @@ all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(NAME) $(wildcard *~) $(find . -type f -name ".*.sw[klmnop]" -delete)
+	$(RM) $(NAME) *~
 
 oclean:
 	$(RM) $(OBJ)
 
 fclean: clean oclean
 
-re: fclean all
+re: oclean all

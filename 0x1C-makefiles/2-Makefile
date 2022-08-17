@@ -1,0 +1,10 @@
+NAME = school
+
+CC = gcc
+
+SRC = $(wildcard *.c)
+
+OBJ = $(patsubst %.c,%.o,$(wildcard *.c))
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)

@@ -5,21 +5,26 @@
 /**
  * print_sign - evaluates a value
  *
+ * @param sign: value of sign
  * @param n: value of parameter
  * @return int: returns an integer number
  */
 
 int print_sign(int n)
 {
+    int sign;
+
     if( n > 0)
     {
         _putchar("+");
-        return 1;
+        sign = 1;
     } else if( n == 0) {
         _putchar("0");
-        return 0;
+        sign = 0;
     } else {
         _putchar("-");
-        return -1;
+        sign = -1;
     }
+    
+    return (sign);
 }

@@ -2,25 +2,23 @@
 /**
  * print_alphabet_x10  -  prints 10 times the alphabety, then new line..
  *
- * Return: Always 0.
+ * Return: nothing.
  */
 
-int print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	int count = 0;
-	char Alphs;
+	char Alpha;
 
 	while (count < 10)
 	{
-		for (Alphs = 'a'; Alphs <= 'z'; Alphs++)
+		for (Alpha = 'a'; Alpha <= 'z'; Alpha++)
 		{
-			_putchar(Alphs);
+			_putchar(Alpha);
 		}
 
 		_putchar('\n');
 
 		count++;
 	}
-
-	return (0);
 }

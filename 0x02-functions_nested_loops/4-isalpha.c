@@ -1,8 +1,9 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * _isalpha  - Short description, single line
- * @c: contians value to be compared
+ * @c: contains value to be compared
  * Return: Always returns zero
  */
 

@@ -3,17 +3,16 @@
 /**
  * print_alphabet - prints alphabet -- Lower case.
  *
- * Return: Always 0.
+ * Return: nothing
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
-	char Alphs;
+	char Alpha;
 
-	for (Alphs = 'a'; Alphs <= 'z'; Alphs++)
+	for (Alpha = 'a'; Alpha <= 'z'; Alpha++)
 	{
-		_putchar(Alphs);
+		_putchar(Alpha);
 	}
 
 	_putchar('\n');
-	return (0);
 }

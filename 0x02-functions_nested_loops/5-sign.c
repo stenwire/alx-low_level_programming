@@ -1,25 +1,29 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_sign - evaluates a value
+ * print_sign - checks sign of integers
+ * @n: receives value
  *
- * @param n: value of parameter
- * @return int: returns an integer number
+ * Return: respective sign accd to value of n
  */
-
 int print_sign(int n)
 {
-    if( n > 0)
-    {
-        _putchar("+");
-        return 1;
-    } else if( n == 0) {
-        _putchar("0");
-        return 0;
-    } else {
-        _putchar("-");
-        return -1;
-    }
+	int sign;
+
+	sign = 0;
+	if (n > 0)
+	{
+		sign = 1;
+		_putchar('+');
+	}
+	else if (n < 0)
+	{
+		sign = -1;
+		_putchar('-');
+	}
+	else
+	{
+		_putchar('0');
+	}
+	return (sign);
 }

@@ -4,10 +4,6 @@
  * linear_search - a linear search algorithm that
  * locates a target value in an array
  *
- * Some description
- * Example:
- *    user_function(22);
- *
  * @array: pointer to array of int
  * @size: length of array
  * @value: target value
